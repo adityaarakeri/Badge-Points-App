@@ -15,18 +15,14 @@ var schema = {
   };
 
 console.log('Please enter the Treehouse credentials:\n');
+
 prompt.start();
 
 prompt.get(schema, function (err, result) {
-  //
-  // Log the results.
-  //
-//   console.log('Command-line input received:');
-//   console.log('  username: ' + result.email);
-//   console.log('  email: ' + result.password);
+
   var auth = 'Basic ' + new Buffer(result.email + ':' + result.password).toString('base64');
-//   console.log(auth);
   var fileString = `AUTH=${auth}`;
   fs.writeFileSync('./.env', fileString);
   console.log('\n.env file has been created, add it to .gitignore \n');
+
 });
