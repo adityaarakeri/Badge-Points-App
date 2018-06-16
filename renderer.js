@@ -9,19 +9,8 @@ function mergeValues(values, content){
 
 function view(templateName, values, response){
     var fileContents = fs.readFileSync(`./views/${templateName}.html`, {encoding: "utf8"});
-    // var fileContents = fs.readFileSync('./views/' + templateName + '.html', {encoding: "utf8"});
     fileContents = mergeValues(values, fileContents);
     response.write(fileContents.toString());
-
-
-    // response.end();
-    // fs.readFile(`./views/${templateName}.html`, function(err, fileContents){
-    //     if (err) throw err.message;
-
-    //     fileContents = mergeValues(fileContents);
-    //     response.write(fileContents);
-
-    // });
 }
 
 module.exports.view = view;

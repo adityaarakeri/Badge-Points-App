@@ -10,7 +10,6 @@ if (process.env.AUTH === undefined){
     process.exit();
 }
 
-
 /**
  * An EventEmitter to get a Treehouse students profile.
  * @param username
