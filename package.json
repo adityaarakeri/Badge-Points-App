@@ -2,15 +2,16 @@
   "name": "badge-points-app",
   "version": "1.0.0",
   "description": "App to get badge points from treehouse",
-  "main": "app-cli.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "auth": "node auth.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["treehouse"],
+  "author": "aditya",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
-    "nodemon": "^1.17.5"
+	  "dotenv": "^6.0.0",
+    "nodemon": "^1.17.5",
+    "prompt": "^1.0.0"
   }
 }

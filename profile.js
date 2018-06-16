@@ -5,6 +5,12 @@ var http = require("http");
 var util = require("util");
 
 
+if (process.env.AUTH === undefined){
+    console.log('\nplease run $ npm run auth , to create .env file');
+    process.exit();
+}
+
+
 /**
  * An EventEmitter to get a Treehouse students profile.
  * @param username
@@ -18,8 +24,7 @@ function Profile(username) {
         path: `/${username}.json`,
         method: 'GET',
         headers: {
-            // 'Authorization': 'Basic YWRpdHlhMDA1QGdtYWlsLmNvbTpZYW1haGF5emZyMQ=='
-            'Authorization': `Basic ${process.env.AUTH}`
+            'Authorization': `${process.env.AUTH}`
         }
     };
 
