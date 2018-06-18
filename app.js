@@ -4,4 +4,4 @@ const router = require('./router').router;
 http.createServer(function(request, respose){
     router.home(request, respose);
     router.user(request, respose);
-}).listen(3000);
+}).listen(3000); // listen on port 3000

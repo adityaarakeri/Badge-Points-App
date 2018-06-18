@@ -1,6 +1,6 @@
 # Badge Points display App
 
-App to search with a particular username and display the javascript badge points from treehouse community
+App to search with a particular username and display the javascript badge points from treehouse community built using native libraries
 
 ## Steps to install and run
 - clone the repo
